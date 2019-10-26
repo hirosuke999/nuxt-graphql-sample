@@ -1,0 +1,12 @@
+query GetRepoNames($number_of_repos: Int!) {
+  viewer {
+    repositories(last: $number_of_repos) {
+      nodes {
+        id
+        name
+        url
+        viewerHasStarred
+      }
+    }
+  }
+}
